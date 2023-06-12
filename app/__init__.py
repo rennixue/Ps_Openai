@@ -9,11 +9,11 @@ CORS(app, supports_credentials=True)
 
 url = 'http://44.240.140.3:99/ps_api'
 headers = {"content-type": "application/json"}
-@app.route('/ps_api')
+@app.route('/ps_api',methods=['GET','POST'])
 def index():
     data1 = request.get_data()
     data = json.loads(data1)
-    content = data.get('content')
+    content = data.get('prompt')
 
 
     res = create_openai(content)
