@@ -1,7 +1,7 @@
 from flask import Flask,json,request
 from flask_cors import CORS
 
-from utils.openai import create_openai
+from chatgpt import create_openai
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
