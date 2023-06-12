@@ -14,7 +14,7 @@ services:
       - /bin/sh
       - -c
       - |
-             flask run -h 0.0.0.0 -p 8000
+             tail -f /dev/null
 
     ports:
       - "99:8000"
