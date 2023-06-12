@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  ps_flask:
+    build: .
+    image: ps_flag:1.0
+    restart: always
+    container_name: "compose-ps"
+    volumes:
+      - "./:/app:rw"
+
+    environment:
+      - FLASK_DEBUG=product
+    command:
+      - /bin/sh
+      - -c
+      - |
+            python app.py
+
+    ports:
+      - "99:8000"
+    networks:
+      - app_net
+
+networks:
+  app_net:
