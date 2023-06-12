@@ -6,7 +6,7 @@ def get_api_key():
     '''
     {"api": "你的 api keys"}
     '''
-    openai_key_file = './openai_key.json'
+    openai_key_file = 'openai_key.json'
     with open(openai_key_file, 'r', encoding='utf-8') as f:
         openai_key = json.loads(f.read())
     return openai_key['api']
