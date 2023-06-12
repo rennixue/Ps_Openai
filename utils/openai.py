@@ -13,7 +13,7 @@ def get_api_key():
 
 
 def create_openai(prompt):
-    openai.api_key = "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"
+    openai.api_key = get_api_key()
     response = openai.ChatCompletion.create(
         # text-davinci-003 是指它的模型
         model="gpt-3.5-turbo",
