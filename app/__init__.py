@@ -10,5 +10,3 @@ def index():
     current_id = data.get('current_id')
     return 'Hello %s and %s!' % (uuid,current_id)
 
-if __name__ == '__main__':
-    app.run()

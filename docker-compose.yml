@@ -14,7 +14,7 @@ services:
       - /bin/sh
       - -c
       - |
-             export FLASK_APP=app && gunicorn -t 30000 -w 4 -b 0.0.0.0:8000 "app"
+             flask run -h 0.0.0.0 -p 8000
 
     ports:
       - "99:8000"
