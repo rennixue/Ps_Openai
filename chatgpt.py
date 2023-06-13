@@ -18,5 +18,5 @@ def create_openai(prompt):
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}]
     )
-    message = response.get("choices")[0].message
+    message = response.get("choices")[0].message["content"]
     return message
