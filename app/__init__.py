@@ -17,5 +17,5 @@ def index():
 
 
     res = create_openai(content)
-    return 'Hello %s!' % res
+    return '%s' % res
 
