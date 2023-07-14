@@ -1,6 +1,6 @@
 import json
 import openai
-
+import random
 def get_api_key():
     '''
     {"api": "你的 api keys"}
@@ -8,7 +8,9 @@ def get_api_key():
     openai_key_file = './openai_key.json'
     with open(openai_key_file, 'r', encoding='utf-8') as f:
         openai_key = json.loads(f.read())
-    return openai_key['api']
+    api_key_list = ['api1', 'api2', 'api3']
+    api_value = random.sample(api_key_list, 1)
+    return openai_key[api_value[0]]
 
 
 def create_openai(prompt):
