@@ -10,6 +10,7 @@ def get_api_key():
         openai_key = json.loads(f.read())
     api_key_list = ['api1', 'api2', 'api3']
     api_value = random.sample(api_key_list, 1)
+    print("api",openai_key[api_value[0]])
     return openai_key[api_value[0]]
 
 
