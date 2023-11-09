@@ -19,3 +19,12 @@ def index():
     res = create_openai(content)
     return '%s' % res
 
+
+@app.route('/ps_mt',methods=['GET','POST'])
+def index():
+    data1 = request.get_data()
+    data = json.loads(data1)
+    content = data.get('prompt')
+
+    res = create_openai(content)
+    return '%s' % res
